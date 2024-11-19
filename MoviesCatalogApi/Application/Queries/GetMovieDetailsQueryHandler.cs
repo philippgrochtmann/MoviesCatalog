@@ -2,6 +2,7 @@
 using MediatR;
 using MovieCatalogApi.Application.Dtos;
 using MovieCatalogApi.Domain.Interfaces.Repository;
+using MoviesCatalogApi.Domain.Exceptions;
 
 namespace MoviesCatalogApi.Application.Queries
 {
@@ -22,9 +23,9 @@ namespace MoviesCatalogApi.Application.Queries
             var movie = await _movieRepository.GetByIdAsync(request.MovieId);
 
             if (movie == null)
-                throw new System.Exception("Filme não encontrado.");
+                throw new NotFoundException(nameof(movie), request.MovieId);
 
-           
+
             return _mapper.Map<MovieDto>(movie);
         }
     }

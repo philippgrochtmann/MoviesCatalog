@@ -6,7 +6,7 @@ using MovieCatalogApi.Domain.Interfaces.Repository;
 using MovieCatalogApi.Enums;
 using MoviesCatalogApi.Domain.Exceptions;
 
-namespace MovieCatalog.Application.Commands.Movies
+namespace MovieCatalog.Application.Commands
 {
     public class RateMovieCommandHandler : IRequestHandler<RateMovieCommand, MovieDto>
     {

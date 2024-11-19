@@ -26,7 +26,7 @@ namespace MovieCatalogApi.Application.Comands
         {
             var existingMovie = await _movieRepository.GetByTitleAsync(request.Title);
             if (existingMovie != null)
-                throw new Exception("Filme já está na watchlist.");
+                throw new BusinessException("Filme já está na watchlist.");
 
             var movieDetails = await _omdbService.GetMovieDetailsAsync(request.Title);
 

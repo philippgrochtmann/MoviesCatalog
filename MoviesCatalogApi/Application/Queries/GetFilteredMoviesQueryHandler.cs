@@ -4,7 +4,7 @@ using MovieCatalogApi.Application.Dtos;
 using MovieCatalogApi.Domain.Interfaces.Repository;
 using MoviesCatalogApi.Application.Queries;
 
-namespace MovieCatalog.Application.Queries.Movies
+namespace MovieCatalog.Application.Queries
 {
     public class GetFilteredMoviesQueryHandler : IRequestHandler<GetFilteredMoviesQuery, IEnumerable<MovieDto>>
     {

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace MoviesCatalogApi.Domain.Interfaces.Middlewares
+﻿namespace MoviesCatalogApi.Domain.Interfaces.Middlewares
 {
     public interface IExceptionHandlerMiddleware
     {

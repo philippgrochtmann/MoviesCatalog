@@ -1,5 +1,4 @@
 ﻿using MovieCatalogApi.Enums;
-using System.ComponentModel.DataAnnotations;
 
 namespace MovieCatalogApi.Domain.Models
 {
