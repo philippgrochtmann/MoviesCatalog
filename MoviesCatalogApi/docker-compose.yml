@@ -1,0 +1,22 @@
+﻿version: '3.9'
+
+services:
+  dbnotereader:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: dbMovieCatalog
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "teste@01" 
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    networks:
+      - dev-network
+
+volumes:
+  sqlserver-data:
+
+networks:
+  dev-network:
+    driver: bridge
